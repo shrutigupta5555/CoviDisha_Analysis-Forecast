@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+   
+<div class="container">
+
+   <h1 class="heading">CoviDisha India Information Module : Search for Overall Analysis, Overall Forescast,Statewise Analysis</h1>
+
+   <input type="text" placeholder="search images" id="search-box">
+
+   <div class="image-container">
+
+      <div class="image" data-title="analysis">
+         <img src="images2/Active_L.PNG" alt="">
+         <h3>Active Cases Analysis</h3>
+      </div>
+
+      
+
+      <div class="image" data-title="analysis">
+         <img src="images2/Death_L.PNG" alt="">
+         <h3>Death Cases Analysis</h3>
+      </div>
+
+      <div class="image" data-title="analysis">
+         <img src="images2/Recovered_L.PNG" alt="">
+         <h3>Recovered Cases Analysis</h3>
+      </div>
+
+      <div class="image" data-title="forecast">
+         <img src="images2/Active_F.PNG" alt="">
+         <h3>Forecast of total Active Cases</h3>
+      </div>
+
+      
+
+      <div class="image" data-title="forecast">
+         <img src="images2/Death_F.PNG" alt="">
+         <h3>Forecast of total Death Cases</h3>
+      </div>
+
+      <div class="image" data-title="forecast">
+         <img src="images2/Recovered_F.PNG" alt="">
+         <h3>Forecast of total Recovered Cases</h3>
+      </div>
+
+      <div class="image" data-title="statewise">
+         <img src="images2/so/2020_State_Active.PNG" alt="">
+         <h3>2020 Statewise Active Cases</h3>
+      </div>
+
+      <div class="image" data-title="statewise">
+         <img src="images2/so/2020_State_Death.PNG" alt="">
+         <h3>2020 Statewise Death Cases</h3>
+      </div>
+
+      <div class="image" data-title="statewise">
+         <img src="images2/so/2020_State_Recovered.PNG" alt="">
+         <h3>2020 Statewise Recovered Cases</h3>
+      </div>
+
+      <div class="image" data-title="statewise">
+         <img src="images2/so/2021_State_Active.PNG" alt="">
+         <h3>2021 Statewise Active Cases</h3>
+      </div>
+
+      <div class="image" data-title="statewise">
+         <img src="images2/so/2021_State_Death.PNG" alt="">
+         <h3>2021 Statewise Death Cases</h3>
+      </div>
+
+      <div class="image" data-title="statewise">
+         <img src="images2/so/2021_State_Recovered.PNG" alt="">
+         <h3>2021 Statewise Recovered Cases</h3>
+      </div>
+
+      <div class="image" data-title="statewise">
+         <img src="images2/so/2022_State_Death.PNG" alt="">
+         <h3>2022 Statewise Death Cases</h3>
+      </div>
+
+      <div class="image" data-title="statewise">
+         <img src="images2/so/2022_State_Recovered.PNG" alt="">
+         <h3>2022 Statewise Recovered Cases</h3>
+      </div>
+
+      <div class="image" data-title="assam">
+         <img src="images2/si/Assam.PNG" alt="">
+         <h3>Assam Stats</h3>
+      </div>
+
+      <div class="image" data-title="delhi">
+         <img src="images2/si/Delhi.PNG" alt="">
+         <h3>Delhi Stats</h3>
+      </div>
+
+      <div class="image" data-title="gujarat">
+         <img src="images2/si/Gujarat.PNG" alt="">
+         <h3>Gujarat Stats</h3>
+      </div>
+
+      <div class="image" data-title="jnk">
+         <img src="images2/si/JnK.PNG" alt="">
+         <h3>Jammu and Kashmir Stats</h3>
+      </div>
+
+      <div class="image" data-title="kerala">
+         <img src="images2/si/Kerala.PNG" alt="">
+         <h3>Kerala Stats</h3>
+      </div>
+
+      <div class="image" data-title="maharashtra">
+         <img src="images2/si/Maharashtra.PNG" alt="">
+         <h3>Maharashtra Stats</h3>
+      </div>
+
+      <div class="image" data-title="punjab">
+         <img src="images2/si/Punjab.PNG" alt="">
+         <h3>Punjab Stats</h3>
+      </div>
+
+      <div class="image" data-title="tamil Nadu">
+         <img src="images2/si/Tamil Nadu.PNG" alt="">
+         <h3>Tamil Nadu Stats</h3>
+      </div>
+
+      <div class="image" data-title="uttar Pradesh">
+         <img src="images2/si/Uttar Pradesh.PNG" alt="">
+         <h3>Uttar Pradesh Stats</h3>
+      </div>
+
+      <div class="image" data-title="comparison">
+         <img src="images2/si/MahavJnk.PNG" alt="">
+         <h3>Comparison of Maharashtra Stats vs JnK Stats</h3>
+      </div>
+
+      <div class="image" data-title="comparison">
+         <img src="images2/si/KeralavMaha.png" alt="">
+         <h3>Comparison of Kerala Stats vs Maharashtra Stats</h3>
+      </div>
+
+   </div>
+
+</div>
+
+<script>
+
+let searchBox = document.querySelector('#search-box');
+let images = document.querySelectorAll('.container .image-container .image');
+
+searchBox.oninput = () =>{
+   images.forEach(hide => hide.style.display = 'none');
+   let value = searchBox.value;
+   images.forEach(filter =>{
+      let title = filter.getAttribute('data-title');
+      if(value == title){
+         filter.style.display = 'block';
+      }
+      if(searchBox.value == ''){
+         filter.style.display = 'block';
+      }
+   });
+};
+
+</script>
+
+</body>
+</html>
